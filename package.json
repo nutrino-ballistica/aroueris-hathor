@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "prebuild": "rm -rf dist docs",
+    "save-dns": "mv docs/CNAME .",
+    "prebuild": "npm run save-dns && rm -rf dist docs",
     "build": "vue-cli-service build",
-    "postbuild": "mv dist docs",
+    "postbuild": "mv dist docs && npm run restore-dns",
+    "restore-dns": "mv CNAME docs",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
@@ -44,6 +46,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "sitemap-webpack-plugin": "^1.1.0",
     "typescript": "~3.9.3",
     "vue-template-compiler": "^2.6.11"
   }
