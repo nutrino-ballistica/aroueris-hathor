@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.14d8e96872d6431525a601bd7be24a28.js"
+  "/precache-manifest.b587dcb2d3f4ad2c54cef45ddced0e1c.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "aroueris-hathor"});
